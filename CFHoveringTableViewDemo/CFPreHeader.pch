@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  CFHoveringTableViewDemo
+//
+//  Created by 于传峰 on 16/9/10.
+//  Copyright © 2016年 于传峰. All rights reserved.
+//
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+
+#import "Masonry.h"
+
+/* 随机色 */
+#define KRandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1]
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
