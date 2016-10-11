@@ -31,6 +31,7 @@
 		8615A71A1D83E7C5006EBCB1 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8615A70E1D83E7C5006EBCB1 /* ViewController+MASAdditions.m */; };
 		8615A71B1D83E7C5006EBCB1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8615A70F1D83E7C5006EBCB1 /* README.md */; };
 		8615A7211D83F420006EBCB1 /* NextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8615A7201D83F420006EBCB1 /* NextTableViewController.m */; };
+		861A8ADC1DACDE3600512E5C /* CFContentHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 861A8ADB1DACDE3600512E5C /* CFContentHeadView.m */; };
 		8696707E1DAB9AF0001B28E2 /* CFContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8696707D1DAB9AF0001B28E2 /* CFContentScrollView.m */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,8 @@
 		8615A71C1D83E7FC006EBCB1 /* CFPreHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFPreHeader.pch; sourceTree = "<group>"; };
 		8615A71F1D83F420006EBCB1 /* NextTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextTableViewController.h; sourceTree = "<group>"; };
 		8615A7201D83F420006EBCB1 /* NextTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextTableViewController.m; sourceTree = "<group>"; };
+		861A8ADA1DACDE3600512E5C /* CFContentHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFContentHeadView.h; sourceTree = "<group>"; };
+		861A8ADB1DACDE3600512E5C /* CFContentHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFContentHeadView.m; sourceTree = "<group>"; };
 		8696707C1DAB9AF0001B28E2 /* CFContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFContentScrollView.h; sourceTree = "<group>"; };
 		8696707D1DAB9AF0001B28E2 /* CFContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFContentScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +168,8 @@
 				8615A7201D83F420006EBCB1 /* NextTableViewController.m */,
 				8615A6ED1D83E6F4006EBCB1 /* CFHoveringTableViewController.h */,
 				8615A6EE1D83E6F4006EBCB1 /* CFHoveringTableViewController.m */,
+				861A8ADA1DACDE3600512E5C /* CFContentHeadView.h */,
+				861A8ADB1DACDE3600512E5C /* CFContentHeadView.m */,
 				8696707C1DAB9AF0001B28E2 /* CFContentScrollView.h */,
 				8696707D1DAB9AF0001B28E2 /* CFContentScrollView.m */,
 				8615A6EA1D83E6D2006EBCB1 /* CFContentTableView.h */,
@@ -392,6 +397,7 @@
 				8615A7211D83F420006EBCB1 /* NextTableViewController.m in Sources */,
 				8615A6EF1D83E6F4006EBCB1 /* CFHoveringTableViewController.m in Sources */,
 				8615A7191D83E7C5006EBCB1 /* View+MASAdditions.m in Sources */,
+				861A8ADC1DACDE3600512E5C /* CFContentHeadView.m in Sources */,
 				8615A7111D83E7C5006EBCB1 /* MASCompositeConstraint.m in Sources */,
 				8615A71B1D83E7C5006EBCB1 /* README.md in Sources */,
 				8696707E1DAB9AF0001B28E2 /* CFContentScrollView.m in Sources */,

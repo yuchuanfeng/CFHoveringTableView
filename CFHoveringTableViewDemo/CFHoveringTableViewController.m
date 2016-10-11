@@ -11,6 +11,7 @@
 #import "CFTitleBar.h"
 #import "NextTableViewController.h"
 #import "CFContentScrollView.h"
+#import "CFContentHeadView.h"
 
 @interface CFHoveringTableViewController ()<UIScrollViewDelegate, UITableViewDelegate>
 @property (nonatomic, weak) UIScrollView *scrollView;
@@ -123,16 +124,16 @@
 
 - (void)setupHeadView
 {
-    UIView* headBackView = [[UIView alloc] init];
+    UIView* headBackView = [[CFContentHeadView alloc] init];
     headBackView.backgroundColor = [UIColor blueColor];
-    headBackView.userInteractionEnabled = NO;
+//    headBackView.userInteractionEnabled = NO;
     headBackView.frame = CGRectMake(0, 0, kScreenWidth, self.headViewHeight + TitleHeight);
     [self.view addSubview:headBackView];
     self.headBackView = headBackView;
     
     UIButton* backButton = [[UIButton alloc] init];
     [backButton setTitle:@"返回" forState:UIControlStateNormal];
-    [self.view addSubview:backButton];
+    [headBackView addSubview:backButton];
     [backButton addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
     [backButton makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(headBackView);
