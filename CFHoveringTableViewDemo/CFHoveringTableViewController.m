@@ -35,6 +35,8 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    self.view.clipsToBounds = YES;
+    
     self.headViewHeight = 200;
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
