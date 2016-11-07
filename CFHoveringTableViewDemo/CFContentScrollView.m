@@ -10,6 +10,15 @@
 
 @implementation CFContentScrollView
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame])
+    {
+        self.clipsToBounds = NO;
+    }
+    return self;
+}
+
 //-(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
 //
 //    
@@ -22,7 +31,7 @@
     UIView* view = [super hitTest:point withEvent:event];
     if (view)
     {
-        NSLog(@"view");
+        NSLog(@"view = %@", view);
         self.scrollEnabled = YES;
         return view;
     }else{

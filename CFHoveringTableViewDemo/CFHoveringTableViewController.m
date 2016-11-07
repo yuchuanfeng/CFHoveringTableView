@@ -141,7 +141,7 @@
     
     CFTitleBar* titleBarView = [[CFTitleBar alloc] init];
     //    titleBarView.frame = CGRectMake(0, HeadHeight, kScreenWidth, TitleHeight);
-    [self.view addSubview:titleBarView];
+    [headBackView addSubview:titleBarView];
     self.titleBarView = titleBarView;
     titleBarView.backgroundColor = [UIColor whiteColor];
     [titleBarView makeConstraints:^(MASConstraintMaker *make) {
