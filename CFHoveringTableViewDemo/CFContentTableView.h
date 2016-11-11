@@ -19,6 +19,4 @@
 
 @interface CFContentTableView : UITableView
 
-
-
 @end

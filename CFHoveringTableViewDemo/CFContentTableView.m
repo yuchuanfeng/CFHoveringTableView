@@ -11,7 +11,6 @@
 
 @interface CFContentTableView ()<UITableViewDataSource>
 
-@property (nonatomic, weak) UIWindow *nextWindow;
 
 @end
 
@@ -43,15 +42,18 @@
     
 }
 
-- (void)willMoveToWindow:(UIWindow *)newWindow
+
+- (void)didMoveToWindow
 {
-    [super willMoveToWindow:newWindow];
-    self.nextWindow = newWindow;
+    [super didMoveToWindow];
 }
+
+
 
 - (void)setContentOffset:(CGPoint)contentOffset
 {
-    if (self.nextWindow)
+
+    if (self.window)
     {
         [super setContentOffset:contentOffset];
     }
@@ -59,7 +61,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return arc4random_uniform(30) + 1;
+    return tableView.tag * 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

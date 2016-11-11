@@ -88,6 +88,7 @@
     
     
     CFContentTableView* table1 = [[CFContentTableView alloc] init];
+    table1.tag = 1;
     table1.delegate = self;
     self.table1 = table1;
     table1.tableHeaderView = headView;
@@ -101,6 +102,7 @@
     
     
     CFContentTableView* table2 = [[CFContentTableView alloc] init];
+    table2.tag = 2;
     table2.delegate = self;
     self.table2 = table2;
     table2.tableHeaderView = headView;
@@ -112,6 +114,7 @@
     }];
     
     CFContentTableView* table3 = [[CFContentTableView alloc] init];
+    table3.tag = 3;
     table3.delegate = self;
     self.table3 = table3;
     table3.tableHeaderView = headView;
@@ -153,7 +156,7 @@
     }];
     [self.scrollView makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self.view);
-        make.top.equalTo(titleBarView.mas_bottom);
+        make.top.equalTo(self.view);
     }];
     
     __weak typeof(self) weakSelf = self;
