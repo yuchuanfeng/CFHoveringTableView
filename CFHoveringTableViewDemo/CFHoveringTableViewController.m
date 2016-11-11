@@ -13,8 +13,10 @@
 #import "CFContentScrollView.h"
 #import "CFContentHeadView.h"
 
+
+
 @interface CFHoveringTableViewController ()<UIScrollViewDelegate, UITableViewDelegate>
-@property (nonatomic, weak) UIScrollView *scrollView;
+@property (nonatomic, weak) CFContentScrollView *scrollView;
 @property (nonatomic, weak) CFContentTableView *table1;
 @property (nonatomic, weak) CFContentTableView *table2;
 @property (nonatomic, weak) CFContentTableView *table3;
@@ -35,9 +37,11 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    
     self.view.clipsToBounds = YES;
     
-    self.headViewHeight = 200;
+    self.headViewHeight = HeadViewHeight;
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
@@ -67,7 +71,7 @@
 - (void)setupContentView
 {
     // scrollView
-    UIScrollView* scrollView = [[CFContentScrollView alloc] init];
+    CFContentScrollView* scrollView = [[CFContentScrollView alloc] init];
     scrollView.delaysContentTouches = NO;
     [self.view addSubview:scrollView];
     scrollView.backgroundColor = [UIColor redColor];
@@ -214,6 +218,7 @@
                 if (contentView.contentOffset.y < self.headViewHeight || offset.y < self.headViewHeight)
                 {
                     [contentView setContentOffset:offset animated:NO];
+                    self.scrollView.offset = offset;
                 }
             }
         }

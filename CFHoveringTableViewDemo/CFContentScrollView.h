@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CFContentScrollView : UIScrollView
 
+#define HeadViewHeight 200
+
+@interface CFContentScrollView : UIScrollView
+@property (nonatomic, assign) CGPoint offset;
 @end

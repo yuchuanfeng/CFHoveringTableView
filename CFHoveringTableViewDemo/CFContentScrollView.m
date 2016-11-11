@@ -25,25 +25,36 @@
 //    return YES;
 //}
 
+- (void)setOffset:(CGPoint)offset
+{
+    _offset = offset;
+    NSLog(@"%@", NSStringFromCGPoint(offset));
+}
+
 -(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
 
     
     UIView* view = [super hitTest:point withEvent:event];
-    if (view)
+    BOOL hitHead = point.y < (HeadViewHeight - self.offset.y);
+    if (hitHead || !view)
     {
-        NSLog(@"view = %@", view);
-        self.scrollEnabled = YES;
-        return view;
-    }else{
         NSLog(@"no view");
         self.scrollEnabled = NO;
-        for (UIView* subView in self.subviews) {
-            if (subView.frame.origin.x == self.contentOffset.x)
-            {
-                view = subView;
+        if (!view)
+        {
+            for (UIView* subView in self.subviews) {
+                if (subView.frame.origin.x == self.contentOffset.x)
+                {
+                    view = subView;
+                }
             }
         }
         return view;
+    }else{
+        NSLog(@"view = %@", view);
+        self.scrollEnabled = YES;
+        return view;
+        
     }
 }
 
